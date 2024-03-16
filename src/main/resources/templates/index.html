@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Employee List</title>
+</head>
+
+<body>
+	<h1>Employee List</h1>
+	<table border="1">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Name</th>
+				<th>Role</th>
+				<th>Salary</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="empData : ${data}">
+				<td th:text="${empData.eId}">ID</td>
+				<td th:text="${empData.eName}">Name</td>
+				<td th:text="${empData.eRole}">Role</td>
+				<td th:text="${empData.eSalary}">Salary</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+
+</html>
